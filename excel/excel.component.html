@@ -1,0 +1,315 @@
+<!-- 
+<mat-tab-group>
+    <mat-tab label="Second">
+<div class="row">
+    <div style="width: 500px; margin-left: 400px;">
+        <div class="panel panel-primary">
+            <div class="panel-heading"></div>
+
+            <div class="panel-body">
+
+                <input type="file" (change)="onFileChange($event)" multiple="false" />
+
+                <table class="col-md-12">
+                    <tbody>
+                        <tr *ngFor="let row of data">
+                            <td *ngFor="let col of row">
+                                {{col}}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+        
+   
+                <div class="card">
+                    <div class="card-header text-center">
+                        Registration Form
+                    </div>
+                    <div class="card-body" style="font-size: small;">
+                        <form [formGroup]="form" (ngSubmit)="details()" class="form">
+
+                            <div class="form-group">
+                                <label for="name">Name: </label>
+                                <input type="text" class="form-control" formControlName="Name" id="name"
+                                    [(ngModel)]="Ename" value={{Ename}}>
+                                <span id="nameError" class="error-message"
+                                    *ngIf="!form.controls.Name.valid && form.controls.Name.dirty">Please Enter Your
+                                    Name</span>
+                            </div>
+
+                            <div class="form-row">
+
+                                <div class="col">
+                                    <label for="add1">Address 1: </label>
+                                    <textarea type="text" rows="2" class="form-control" formControlName="Address1"
+                                        id="add1" [(ngModel)]="Eadd1" value={{Eadd1}}></textarea>
+                                    <span id="add1Error" class="error-message"
+                                        *ngIf="!form.controls.Address1.valid && form.controls.Address1.dirty">Please
+                                        Enter Your Add
+                                        1</span>
+                                </div>
+                                <div class="col">
+                                    <label for="add2">Address 2: </label>
+                                    <textarea type="text" rows="2" class="form-control" formControlName="Address2"
+                                        id="add2" [(ngModel)]="Eadd2" value={{Eadd2}}></textarea>
+                                    <span id="add2Error" class="error-message"
+                                        *ngIf="!form.controls.Address2.valid && form.controls.Address2.dirty">Please
+                                        Enter Your Add
+                                        2</span>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-5 ">
+                                    <label for="city">City: </label>
+                                    <input type="text" class="form-control" formControlName="City" id="city"
+                                        [(ngModel)]="Ecity" value={{Ecity}}>
+                                    <span id="cityError" class="error-message"
+                                        *ngIf="!form.controls.City.valid && form.controls.City.dirty">Please Enter Your
+                                        City</span>
+                                </div>
+
+
+                                <div class="form-group col-md-4">
+                                    <label for="state">State: </label>
+                                    <input type="text" class="form-control" formControlName="State" id="state"
+                                        [(ngModel)]="Estate" value={{Estate}}>
+                                    <span id="stateError" class="error-message"
+                                        *ngIf="!form.controls.State.valid && form.controls.State.dirty">Please Enter
+                                        Your
+                                        State</span>
+                                </div>
+
+
+                                <div class="form-group col-md-3">
+                                    <label for="pin">PIN: </label>
+                                    <input type="number" class="form-control" formControlName="PIN" id="pin"
+                                        [(ngModel)]="Epin" value={{Epin}}>
+                                    <span id="pinError" class="error-message"
+                                        *ngIf="!form.controls.PIN.valid && form.controls.PIN.dirty">Please Enter Your
+                                        Pin</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="conname">Consignee name: </label>
+                                <input type="text" class="form-control" formControlName="consigneeName" id="conname"
+                                    [(ngModel)]="Econname" value={{Econname}}>
+                                <span id="connameError" class="error-message"
+                                    *ngIf="!form.controls.consigneeName.valid && form.controls.consigneeName.dirty">Please
+                                    Enter
+                                    Your Consignee Name</span>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="con2name">Consignee Address 1: </label>
+                                    <textarea type="text" class="form-control" formControlName="consigneeAddress1"
+                                        id="con2name" [(ngModel)]="Econadd1" value={{Econadd1}}></textarea>
+                                    <span id="con2nameError" class="error-message"
+                                        *ngIf="!form.controls.consigneeAddress1.valid && form.controls.consigneeAddress1.dirty">Please
+                                        Enter Your Consignee Address 1</span>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label for="addname">Consignee Address 2: </label>
+                                    <textarea type="text" class="form-control" formControlName="consigneeAddress2"
+                                        id="addname" [(ngModel)]="Econadd2" value={{Econadd2}}></textarea>
+                                    <span id="addnameError" class="error-message"
+                                        *ngIf="!form.controls.consigneeAddress2.valid && form.controls.consigneeAddress2.dirty">Please
+                                        Enter Your Consignee Address 2</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block" style="align-content: center;" type="submit"
+                                    [disabled]="!form.valid">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-footer text-muted" style="font-size: small;">
+                         Click to download above format!
+                        <button class="btn btn-dark" (click)="export()">EXPORT</button>
+                    </div>
+                </div>
+           
+           
+            </div>
+
+        </div>
+    </div>
+</div>
+</mat-tab>
+</mat-tab-group> -->
+
+
+<mat-tab-group animationDuration="0ms" dynamicHeight="true" mat-align-tabs="center" [color]="'warn'">
+    <mat-tab label="I Step">
+        <div style="margin-left: 450px;">
+            <div style="margin: 50px;">
+                <input type="file" (change)="onFileChange($event)" multiple="false" class="btn-dark text-center" />
+            </div>
+            <table class=" table table-striped table-sm col-md-6">
+
+                <tbody *ngIf="data;else elseBlock" style="font-size: small;">
+                    <h5 style="text-align: center;"><em>Your Personal Data</em></h5>
+                    <h5 style="text-align: center;"><em>(Choose a File to display your data)</em></h5>
+                    <tr *ngFor="let row of data">
+                        <td *ngFor="let col of row">
+                            {{col}}
+                        </td>
+                    </tr>
+                </tbody>
+
+                <!-- <tbody *ngIf="data;else elseBlock" style="font-size: small;">
+                    <h5 style="text-align: center;"><em>Your Personal Data</em></h5>
+                    <h5 style="text-align: center;"><em>(Choose a File to display your data)</em></h5>
+                    <tr *ngFor="let row of data">
+                      
+                        {{row}}
+                    </tr>
+                </tbody> -->
+
+                <ng-template #elseBlock>
+                    <h6 style="text-align: center;">Wrong Format</h6>
+                    <h6 style="text-align: center;">(Go to step 2 and export the format)</h6>
+                </ng-template>
+            </table>
+        </div>
+    </mat-tab>
+
+    <mat-tab label="II Step">
+        <div class="row" style="margin: 30px; margin-left: 380px;">
+            <div style="width: 500px;">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"></div>
+
+                    <div class="panel-body">
+
+
+
+                        <div class="card">
+                            <div class="card-header text-center">
+                               <em>Registration Form</em> 
+                            </div>
+                            <div class="card-body" style="font-size: small;">
+                                <form [formGroup]="form" (ngSubmit)="details()" class="form">
+
+                                    <div class="form-group">
+                                        <label for="name">Name: </label>
+                                        <input type="text" class="form-control" formControlName="Name" id="name"
+                                            [(ngModel)]="Ename" value={{Ename}}>
+                                        <span id="nameError" class="error-message"
+                                            *ngIf="!form.controls.Name.valid && form.controls.Name.dirty">Please Enter
+                                            Your
+                                            Name</span>
+                                    </div>
+
+                                    <div class="form-row">
+
+                                        <div class="col">
+                                            <label for="add1">Address 1: </label>
+                                            <textarea type="text" rows="2" class="form-control"
+                                                formControlName="Address1" id="add1" [(ngModel)]="Eadd1"
+                                                value={{Eadd1}}></textarea>
+                                            <span id="add1Error" class="error-message"
+                                                *ngIf="!form.controls.Address1.valid && form.controls.Address1.dirty">Please
+                                                Enter Your Add
+                                                1</span>
+                                        </div>
+                                        <div class="col">
+                                            <label for="add2">Address 2: </label>
+                                            <textarea type="text" rows="2" class="form-control"
+                                                formControlName="Address2" id="add2" [(ngModel)]="Eadd2"
+                                                value={{Eadd2}}></textarea>
+                                            <span id="add2Error" class="error-message"
+                                                *ngIf="!form.controls.Address2.valid && form.controls.Address2.dirty">Please
+                                                Enter Your Add
+                                                2</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="form-group col-md-5 ">
+                                            <label for="city">City: </label>
+                                            <input type="text" class="form-control" formControlName="City" id="city"
+                                                [(ngModel)]="Ecity" value={{Ecity}}>
+                                            <span id="cityError" class="error-message"
+                                                *ngIf="!form.controls.City.valid && form.controls.City.dirty">Please
+                                                Enter Your
+                                                City</span>
+                                        </div>
+
+
+                                        <div class="form-group col-md-4">
+                                            <label for="state">State: </label>
+                                            <input type="text" class="form-control" formControlName="State" id="state"
+                                                [(ngModel)]="Estate" value={{Estate}}>
+                                            <span id="stateError" class="error-message"
+                                                *ngIf="!form.controls.State.valid && form.controls.State.dirty">Please
+                                                Enter
+                                                Your
+                                                State</span>
+                                        </div>
+
+
+                                        <div class="form-group col-md-3">
+                                            <label for="pin">PIN: </label>
+                                            <input type="number" class="form-control" formControlName="PIN" id="pin"
+                                                [(ngModel)]="Epin" value={{Epin}}>
+                                            <span id="pinError" class="error-message"
+                                                *ngIf="!form.controls.PIN.valid && form.controls.PIN.dirty">Please Enter
+                                                Your
+                                                Pin</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="conname">Consignee name: </label>
+                                        <input type="text" class="form-control" formControlName="consigneeName"
+                                            id="conname" [(ngModel)]="Econname" value={{Econname}}>
+                                        <span id="connameError" class="error-message"
+                                            *ngIf="!form.controls.consigneeName.valid && form.controls.consigneeName.dirty">Please
+                                            Enter
+                                            Your Consignee Name</span>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="con2name">Consignee Address 1: </label>
+                                            <textarea type="text" class="form-control"
+                                                formControlName="consigneeAddress1" id="con2name" [(ngModel)]="Econadd1"
+                                                value={{Econadd1}}></textarea>
+                                            <span id="con2nameError" class="error-message"
+                                                *ngIf="!form.controls.consigneeAddress1.valid && form.controls.consigneeAddress1.dirty">Please
+                                                Enter Your Consignee Address 1</span>
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="addname">Consignee Address 2: </label>
+                                            <textarea type="text" class="form-control"
+                                                formControlName="consigneeAddress2" id="addname" [(ngModel)]="Econadd2"
+                                                value={{Econadd2}}></textarea>
+                                            <span id="addnameError" class="error-message"
+                                                *ngIf="!form.controls.consigneeAddress2.valid && form.controls.consigneeAddress2.dirty">Please
+                                                Enter Your Consignee Address 2</span>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <button class="btn btn-primary btn-block" style="align-content: center;"
+                                            type="submit" [disabled]="!form.valid">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="card-footer text-muted" style="font-size: small;">
+                                Click to download above format!
+                                <button class="btn btn-dark" (click)="export()">EXPORT</button>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="III Step">View 3</mat-tab>
+</mat-tab-group>

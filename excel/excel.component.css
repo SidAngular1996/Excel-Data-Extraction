@@ -1,0 +1,46 @@
+.error {
+    color: red;
+    font-size:20px;
+   }
+   
+   .success {
+       color: green;
+       font-size:20px;
+      }
+   
+   .error-message{
+       color:red;
+   }
+   
+   .panel-heading {
+       text-align: center;
+       background-color: rgba(28, 139, 236, 0.616)
+   }
+   
+   .panel-body {
+       background-color: rgba(255, 255, 255, 0.616);
+   
+   }
+   
+   .panel {
+       background-color: rgba(255, 255, 255, 0);
+   }
+
+   .mat-tab-labels, .mat-tab-label, .mat-tab-link {
+    color: white;
+    font-size: 16px;
+    background-color: #804A71;
+  }
+  
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+    background: white;
+    height: 5px; 
+  }
+
+  .card{
+      background-image: url(https://images.pexels.com/photos/1037995/pexels-photo-1037995.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+  }
+
+  .table{
+    background-image: url(https://images.pexels.com/photos/19670/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500);
+  }
